@@ -164,7 +164,8 @@ hr {
     border: 2px solid #080a08;
 }
 .btn .line {
-    width: 5%;
+    width: 75px;
+
     position: absolute;
     margin: 0 0 0 110px;
 }
@@ -321,7 +322,7 @@ footer .container p{
 }
 .feedback-icon{
     display: flex;
-    grid-row: span 2;
+    margin-top: 30px;
 }
 footer .container h4{
     font-size: 20px;
@@ -330,10 +331,48 @@ svg{
     color: #ffffff;
     flex-basis: 50px;
 }
-
-
-
-
+@media (max-width:426px) {
+    h1{
+        font-size: 25px;
+    }
+    .review-flex {
+        display: flex;
+        flex-direction: column;
+        gap: 41px;
+    }
+    .experience .container{
+        display: flex;
+        flex-direction: column;
+       }
+       .benefits .container {
+        grid-template-columns: 1fr 5fr 1fr 5fr 1fr 5fr;
+        grid-template-rows: 3fr 1fr 4fr;
+    }
+       footer .container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .feedback-icon {
+        display: flex;
+        justify-content: center;
+    }
+    .down-arrow{
+        margin: 0;
+    }
+    .caption,.down-arrow,.box,ul{
+        display: none;
+    }
+    .about .container h1,p {
+        width: 100%;
+    }
+    .brand-detail {
+        margin: 0 auto;
+    }
+    .btn .line {
+        margin: -13px 0 0 101px;
+    }
+}
 @media( (min-width:425px) and (max-width:768px) ){
     ul{
       display: none;
@@ -405,139 +444,7 @@ svg{
         margin-left: 25px;
     }
   }
-
-
-
-
-
-
-
-
-
-@media( (min-width:1201px) and (max-width:1600px) ){
-    .nav-icon .icon{
-        margin-right: 40px;
-    }
-    .img {
-        width: 950px;
-        margin-left: 220px;
-    }
-    .exp-img {
-        height: 477px;
-    }
-    .caption {
-        width: 550px;
-        margin: 100px -400px;
-        padding: 30px 20px 30px 200px;
-    }
-    .down-arrow{
-        margin: 420px 0 0px 850px;
-    }
-    .experience .container .exp-grid {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 3fr 2fr 2fr 2fr 1fr;
-       
-    }
-   form {
-        width: 740px;
-        margin: 240px 0 0 0;
-    }
-    input{
-        width: 100%;
-      padding: 16px 20px;
-    }
-    .subscribe {
-        padding: 10px 30px;
-    margin: 246px 0 0 590px;
-    }
-    .review-flex1 {
-        margin-top: 120px;
-    }
-    .review-flex {
-        padding: 50px 0;
-    }
-    .review-flex h3 {
-        width: 350px;
-    }
-    .review-grid {
-    padding: 50px;
-    flex-basis: 580px;
-    }
-    .about .container p {
-        width: 500px;
-    }
-    
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (min-width:1601px) {
-    h1{
-        font-size: 45px;
-    }
-    .container{
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-    .caption {
-        width: 900px;
-        margin: 100px -800px;
-        padding: 30px 20px 30px 600px;
-    }
-    .caption p {
-        color: white;
-        padding-top: 20px;
-    }
-    .review-flex1 {
-        margin-top: 120px;
-    }
-    .review-flex {
-        padding: 50px 0;
-    }
-    .review-flex h3 {
-        width: 350px;
-    }
-    .review-grid {
-     padding: 50px;
-     flex-basis: 580px;
-    }
-    .btn .line {
-        width: 70px;
-    }
-    form {
-        width: 740px;
-        margin: 240px 0 0 0;
-    }
-    .subscribe {
-        padding: 10px 30px;
-    margin: 246px 0 0 590px;
-    }
-    .about .container p {
-        width: 500px;
-    }
-}
-
-
-
-
-
-
-
-@media( (min-width:769px) and (max-width:1200px) ){
+  @media( (min-width:769px) and (max-width:1200px) ){
     .benefits .container {
        grid-template-rows: 6fr 1fr 4fr;
     }
@@ -597,45 +504,110 @@ svg{
         width: 500px;
     }
 }
-@media (max-width:426px) {
-    h1{
-        font-size: 25px;
+@media( (min-width:1201px) and (max-width:1600px) ){
+    .nav-icon .icon{
+        margin-right: 40px;
     }
-    .review-flex {
-        display: flex;
-        flex-direction: column;
-        gap: 41px;
+    .img {
+        width: 950px;
+        margin-left: 220px;
     }
-    .experience .container{
-        display: flex;
-        flex-direction: column;
-       }
-       .benefits .container {
-        grid-template-columns: 1fr 5fr 1fr 5fr 1fr 5fr;
-        grid-template-rows: 3fr 1fr 4fr;
+    .exp-img {
+        height: 477px;
     }
-       footer .container {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-    }
-    .feedback-icon {
-        display: flex;
-        justify-content: center;
+    .caption {
+        width: 550px;
+        margin: 100px -400px;
+        padding: 30px 20px 30px 200px;
     }
     .down-arrow{
-        margin: 0;
+        margin: 420px 0 0px 850px;
     }
-    .caption,.down-arrow,.box,ul{
-        display: none;
+    .experience .container .exp-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 3fr 2fr 2fr 2fr 1fr;
+       
     }
-    .about .container h1,p {
+   form {
+        width: 740px;
+        margin: 240px 0 0 0;
+    }
+    input{
         width: 100%;
+      padding: 16px 20px;
     }
-    .brand-detail {
+    .subscribe {
+        padding: 10px 30px;
+    margin: 246px 0 0 590px;
+    }
+    .review-flex1 {
+        margin-top: 120px;
+    }
+    .review-flex {
+        padding: 50px 0;
+    }
+    .review-flex h3 {
+        width: 350px;
+    }
+    .review-grid {
+    padding: 50px;
+    flex-basis: 580px;
+    }
+    .about .container p {
+        width: 500px;
+    }  
+}
+@media (min-width:1601px) {
+    h1{
+        font-size: 45px;
+    }
+    .container{
+        max-width: 1200px;
         margin: 0 auto;
     }
+    .caption {
+        width: 900px;
+        margin: 100px -800px;
+        padding: 30px 20px 30px 600px;
+    }
+    .caption p {
+        color: white;
+        padding-top: 20px;
+    }
+    .review-flex1 {
+        margin-top: 120px;
+    }
+    .review-flex {
+        padding: 50px 0;
+    }
+    .review-flex h3 {
+        width: 350px;
+    }
+    .review-grid {
+     padding: 50px;
+     flex-basis: 580px;
+    }
     .btn .line {
-        margin: -13px 0 0 101px;
+        width: 70px;
+    }
+    form {
+        width: 740px;
+        margin: 240px 0 0 0;
+    }
+    .subscribe {
+        padding: 10px 30px;
+    margin: 246px 0 0 590px;
+    }
+    .about .container p {
+        width: 500px;
     }
 }
+
+
+
+
+
+
+
+
+
