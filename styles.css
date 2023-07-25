@@ -18,7 +18,7 @@ p{
 }
 h1 {
     font-size: 45px;
-    line-height: 3rem;
+    line-height: 4rem;
 }
 h3 {
     font-size: 25px;
@@ -28,8 +28,9 @@ nav .container{
     justify-content: space-between;
     height: 100px;
 }
-.navbar h1{
+.navbar h1 {
     color: rgb(159 166 170);
+    font-size: 20px;
 }
 a{
     text-decoration: none;
@@ -38,8 +39,7 @@ a{
 ul{
     list-style: none;
     display: flex;
-    gap: 2rem;
-      
+    gap: 2rem;    
 }
 .nav-icon .icon{
     color: rgb(131 155 164);
@@ -49,7 +49,6 @@ nav .container >*{
 }
 .img {
     position: relative;
-    height: 500px;
     z-index: 1;
 }
 .caption {
@@ -68,11 +67,10 @@ nav .container >*{
 .down-arrow {
     color: #e3eeeb;
     background-color: rgb(77 105 108);
-    padding: 25px 45px;
+    padding: 20px 45px;
     z-index: 2;
     margin: 420px 0 0px 850px;
     position: absolute;
-    border-radius: 10px;
     font-size: 30px;
 }
 .box {
@@ -80,12 +78,13 @@ nav .container >*{
     z-index: -1;
     padding: 50px 50px;
     border: 3px solid #4f6d77;
-    margin: 420px 0 0 -30px;
+    margin: 459px 0 0 -30px;
     border-radius: 10px;
 }
 img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 hr {
     border-style: none;
@@ -95,11 +94,13 @@ hr {
     width: 10%;
     align-self: center;
 }
+section.benefits {
+    margin: 130px 0;
+}
 .benefits .container {
-    display: grid;
-    grid-template-columns: 1fr 5fr 1fr 5fr 1fr 5fr;
-    grid-template-rows: 8fr 1fr 4fr;
-    align-content: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 70px;
 }
 .benifits-head {
     display: flex;
@@ -120,8 +121,14 @@ hr {
     align-self: baseline;
     color: rgb(131 155 164);
 }
-.benefits .container h3{
-    align-self: baseline;
+.part {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 1fr;
+}
+.benefit-part {
+    display: flex;
+    gap: 20px;
 }
 .experience .container .exp-grid {
     display: grid;
@@ -135,12 +142,12 @@ hr {
     column-gap: 70px;
 }
 .exp-img {
-    height: 485px;
     grid-row-start: 1;
     grid-row-end: -1;
 }
-.experience h1,.definition{
+.experience h1, .definition {
     grid-column: span 3;
+    align-self: center;
 }
 .num {
     color: rgb(98, 145, 155);
@@ -165,7 +172,6 @@ hr {
 }
 .btn .line {
     width: 75px;
-
     position: absolute;
     margin: 0 0 0 110px;
 }
@@ -179,8 +185,8 @@ section.process {
 }
 .process-detail {
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: 3fr 1fr 2fr 1fr 2fr 1fr 2fr;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: 4fr 1fr 2fr 1fr 2fr 1fr 2fr;
     align-content: center;
     gap: 1rem;
 }
@@ -188,11 +194,12 @@ section.process {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    column-gap: 61px;
+    column-gap: 70px;
 }
-  .process h1{
+.process h1 {
+    width: 395px;
     grid-column: span 2;
-  }
+}
   .product-img{
     grid-row: span 7;
     justify-self: end;
@@ -208,6 +215,9 @@ section.process {
     width: 50px;
     border-radius: 50%;
   }
+  .step {
+    grid-row: span 2;
+}
   .step-num p{
     margin-left: 15px;
     margin-top: 10px;
@@ -237,8 +247,8 @@ section.process {
     color: rgb(64, 74, 75);
   }
   .review-grid .quote {
-    font-size: 30px;
-}
+    font-size: 36px;
+   }
   .review-grid {
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -253,9 +263,9 @@ section.process {
     width:60px;
     height: 60px;
 }
-.icon-2{
+.icon-2 {
     display: flex;
-    justify-content: center;
+    align-self: center;
     gap: 2rem;
 }
 .name {
@@ -275,9 +285,9 @@ section.process {
     align-items: center;
     text-align: center;
 }
-.about .container h1{
-    flex-basis: 130px;
-    width: 500px;
+.about .container h1 {
+    flex-basis: 150px;
+    width: 523px;
 }
 .about .container p {
     padding-bottom: 80px;
@@ -324,16 +334,67 @@ footer .container p{
     display: flex;
     margin-top: 30px;
 }
-footer .container h4{
+footer .container h4 {
+    margin-bottom: 20px;
     font-size: 20px;
 }
 svg{
     color: #ffffff;
     flex-basis: 50px;
+}@media  (max-width:320px) {
+    section.benefits {
+        margin: 60px 0;
+    }
+    .benefits .container {
+        row-gap: 50px;
+    }
+    .process h1 {
+        width: 300px;
+    }
+    .about .container h1 {
+        width: 230px;
+    }
+    .process-detail {
+        grid-template-rows: 2fr 1fr 2fr 1fr 2fr 1fr 2fr;
+    }
+    section.process {
+        margin: 100px 0;
+    }
+    .review-flex1 {
+        margin-bottom: 30px;
+    }
+    .about .container h1 {
+        flex-basis: 100px;
+    }
+    form {
+        width: 300px;
+        margin: 224px 0 0 0;
+    }
+    .subscribe {
+        padding: 13px 20px;
+        margin: 228px 0 0 190px;
+    }
 }
+@media ((min-width:321px) and (max-width:375px)){
+    .process h1 {
+        width: 300px;
+    }
+}
+
 @media (max-width:426px) {
+    .container{
+        margin: 0 16px;
+    }
     h1{
-        font-size: 25px;
+        font-size: 23px;
+        line-height: 40px;
+    }
+    h3 {
+        font-size: 18px;
+        align-self: center;
+    }
+    p{
+        font-size: 15px;
     }
     .review-flex {
         display: flex;
@@ -344,11 +405,15 @@ svg{
         display: flex;
         flex-direction: column;
        }
-       .benefits .container {
+    .benefits .container {
         grid-template-columns: 1fr 5fr 1fr 5fr 1fr 5fr;
         grid-template-rows: 3fr 1fr 4fr;
     }
-       footer .container {
+    .benefits .icon {
+        font-size: 35px;
+        margin-top: 20px;
+    }
+    footer .container {
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -363,8 +428,8 @@ svg{
     .caption,.down-arrow,.box,ul{
         display: none;
     }
-    .about .container h1,p {
-        width: 100%;
+    .about .container h1 {
+        width: 230px;
     }
     .brand-detail {
         margin: 0 auto;
@@ -372,13 +437,18 @@ svg{
     .btn .line {
         margin: -13px 0 0 101px;
     }
+    .benefit-part {
+        flex-direction: column;
+    }
+   
+    
 }
 @media( (min-width:425px) and (max-width:768px) ){
     ul{
       display: none;
     }
     h1 {
-        font-size: 35px;
+        font-size: 30px;
     }
     p{
         font-size: 16px;
@@ -394,6 +464,30 @@ svg{
     .brand-detail {
         padding: 0 20px;
         margin: 0 auto;
+    }
+    section.benefits {
+        margin: 100px 0;
+    }
+    .benifits-head h1 {
+        width: 300px;
+    }
+    .process-detail {
+        grid-template-rows: 3fr 1fr 2fr 1fr 2fr 1fr 2fr;
+    }
+    .process h1 {
+        width: 313px;
+    }
+    .exp-img {
+        height: 400px;
+    }
+    .part {
+        grid-template-rows: 2fr 3fr;
+    }
+    .product-img {
+        height: 400px;
+    }
+     .review-flex1 {
+        margin-bottom: 30px;
     }
     .experience .container {
         grid-template-rows: 1fr 1fr;
@@ -421,11 +515,11 @@ svg{
     }
     form {
         width: 420px;
-        margin: 240px 0 0 0;
+        margin: 275px 0 0 0;
     }
     .subscribe {
         padding: 13px 20px;
-        margin: 243px 0 0 305px;
+        margin: 278px 0 0 305px;
     }
     section.review {
         margin-top: 60px;
@@ -440,21 +534,75 @@ svg{
     .about .container p {
         width: 400px;
     }
+    .about .container h1 {
+        width: 425px;
+    }
     .nav-icon .icon {
         margin-left: 25px;
     }
   }
   @media( (min-width:769px) and (max-width:1200px) ){
+    section.banner .container {
+        max-width: 768px;
+    }
+    nav .container {
+        max-width: 807px;
+    }
+    .nav-icon {
+        margin-right: 22px;
+    }
+    
+    .img {
+        width: 657px;
+        margin-left: 107px;
+    }
+    .caption {
+        width: 513px;
+        margin: 31px -400px;
+        padding: 20px 26px 20px 271px;
+    }
+    .caption h1 {
+        font-size: 25px;
+        line-height: 40px;
+    }
+    .caption p {
+        padding-top: 15px;
+        line-height: 23px;
+    }
+    .down-arrow {
+        margin: 263px 0 0px 562px;
+        padding: 13px 40px;
+    }
+    .box {
+        padding: 30px 40px;
+        margin: 278px 0 0 -17px;
+    }
+    h1 {
+        font-size: 35px;
+    }
+    p {
+        font-size: 16px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+   .process .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        column-gap: 61px;
+    }
     .benefits .container {
        grid-template-rows: 6fr 1fr 4fr;
     }
-    .caption,.down-arrow,.box{
-        display: none;
+    .benifits-head h1 {
+        width: 345px;
     }
-    
-    
     section.benefits {
         margin-top: 80px;
+    }
+    .part {
+        grid-template-rows: 2fr 3fr;
     }
     .benefits .icon {
         font-size: 30px;
@@ -464,6 +612,10 @@ svg{
     }
     section.process {
         margin-top: 150px;
+    }
+    .process-detail {
+        grid-template-rows: 3fr 1fr 2fr 1fr 2fr 1fr 2fr;
+        gap: 10px;
     }
     .experience .container .exp-grid {
         grid-template-columns: 1fr 1fr 1fr;
@@ -497,48 +649,50 @@ svg{
         padding: 10px 30px;
     margin: 246px 0 0 590px;
     }
-    .down-arrow{
-        margin: 0;
-    }
     .about .container p {
         width: 500px;
     }
 }
 @media( (min-width:1201px) and (max-width:1600px) ){
+    .process h1 {
+        width: 400px;
+    }
+
+
+
+
     .nav-icon .icon{
         margin-right: 40px;
     }
     .img {
         width: 950px;
+        height: 540px;
         margin-left: 220px;
-    }
-    .exp-img {
-        height: 477px;
     }
     .caption {
         width: 550px;
-        margin: 100px -400px;
-        padding: 30px 20px 30px 200px;
+        margin: 85px -400px;
+        padding: 30px 60px 30px 180px;
     }
     .down-arrow{
-        margin: 420px 0 0px 850px;
+        margin: 461px 0 0px 850px;
     }
     .experience .container .exp-grid {
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 3fr 2fr 2fr 2fr 1fr;
-       
+        grid-template-rows: 3fr 4fr 2fr 3fr 1fr;
     }
-   form {
+   
+    form {
         width: 740px;
-        margin: 240px 0 0 0;
+        margin: 255px 0 0 0;
     }
     input{
         width: 100%;
       padding: 16px 20px;
     }
     .subscribe {
-        padding: 10px 30px;
-    margin: 246px 0 0 590px;
+        padding: 10px 55px;
+        margin: 261px 0 0 556px;
     }
     .review-flex1 {
         margin-top: 120px;
@@ -550,8 +704,8 @@ svg{
         width: 350px;
     }
     .review-grid {
-    padding: 50px;
-    flex-basis: 580px;
+        padding: 40px 28px;
+        flex-basis: 580px;
     }
     .about .container p {
         width: 500px;
@@ -565,14 +719,23 @@ svg{
         max-width: 1200px;
         margin: 0 auto;
     }
+    .img {
+        height: 565px;
+    }
     .caption {
         width: 900px;
-        margin: 100px -800px;
+        margin: 88px -800px;
         padding: 30px 20px 30px 600px;
     }
     .caption p {
         color: white;
         padding-top: 20px;
+    }
+    .down-arrow{
+        margin: 495px 0 0px 1100px;
+    }
+    .box{
+        margin: 495px 0 0 -30px;
     }
     .review-flex1 {
         margin-top: 120px;
@@ -592,11 +755,11 @@ svg{
     }
     form {
         width: 740px;
-        margin: 240px 0 0 0;
+        margin: 260px 0 0 0;
     }
     .subscribe {
-        padding: 10px 30px;
-    margin: 246px 0 0 590px;
+        padding: 10px 55px;
+        margin: 267px 0 0 556px;
     }
     .about .container p {
         width: 500px;
