@@ -79,7 +79,6 @@ nav .container >*{
     padding: 50px 50px;
     border: 3px solid #4f6d77;
     margin: 459px 0 0 -30px;
-    border-radius: 10px;
 }
 img{
     width: 100%;
@@ -154,6 +153,7 @@ section.benefits {
     font-size: 3rem;
     font-weight: bolder;
     margin: 0;
+    align-self: end;
 }
 .num-def {
     width: 15px;
@@ -169,6 +169,11 @@ section.benefits {
     background-color: white;
     color: black;
     border: 2px solid #080a08;
+}
+.arrow {
+    position: absolute;
+    width: 150px;
+    margin: 2px 0 0 79px;
 }
 .btn .line {
     width: 75px;
@@ -200,56 +205,55 @@ section.process {
     width: 395px;
     grid-column: span 2;
 }
-  .product-img{
+.product-img{
     grid-row: span 7;
     justify-self: end;
-  }
-  .vl {
+}
+.vl {
     border-left: 2px solid grey;
-    margin-left: 20px;
-  }
-  .step-num{
+    margin-left: 25px;
+}
+.step-num{
     background-color: rgb(55, 95, 95);
     color: white;
     height: 50px;
     width: 50px;
     border-radius: 50%;
-  }
-  .step {
+}
+.step {
     grid-row: span 2;
 }
-  .step-num p{
+.step-num p {
     margin-left: 15px;
-    margin-top: 10px;
+    margin-top: 12px;
     color: white;
-  }
-  .review-flex,.review-flex1{
+}
+.review-flex,.review-flex1{
     display: flex;
     justify-content: space-between;
-  }
- 
-  .review-flex1 h1{
+}
+.review-flex1 h1{
     flex-basis: 400px;
-  }
-  .review-flex h3{
+}
+.review-flex h3{
     grid-column: span 2;
-  }
-  .review-flex .para{
+}
+.review-flex .para{
     grid-column: span 2;
-  }
-  .review-flex1,.review-flex i{
+}
+.review-flex1,.review-flex i{
     font-size: 2rem;
-  }
-  .fa-arrow-left{
+}
+.fa-arrow-left{
     color: rgb(117, 137, 139);
-  }
-  .fa-arrow-right{
+}
+.fa-arrow-right{
     color: rgb(64, 74, 75);
-  }
-  .review-grid .quote {
+}
+.review-grid .quote {
     font-size: 36px;
-   }
-  .review-grid {
+}
+.review-grid {
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 2fr 4fr 4fr 2fr;
@@ -298,7 +302,9 @@ form {
 }
 input{
     width: 100%;
-  padding: 16px 20px;
+    padding: 16px 20px;
+    border-style: none;
+    box-shadow: 1px 0px 8px 1px #888888;
 }
 .subscribe {
     background-color: rgb(77 105 108);
@@ -341,7 +347,8 @@ footer .container h4 {
 svg{
     color: #ffffff;
     flex-basis: 50px;
-}@media  (max-width:320px) {
+}
+@media  (max-width:320px) {
     section.benefits {
         margin: 60px 0;
     }
@@ -353,6 +360,10 @@ svg{
     }
     .about .container h1 {
         width: 230px;
+    }
+    .process .container {
+        display: flex;
+        flex-direction: column;
     }
     .process-detail {
         grid-template-rows: 2fr 1fr 2fr 1fr 2fr 1fr 2fr;
@@ -366,6 +377,10 @@ svg{
     .about .container h1 {
         flex-basis: 100px;
     }
+    .arrow {
+        width: 120px;
+        margin: 13px 0 0 79px;
+    }
     form {
         width: 300px;
         margin: 224px 0 0 0;
@@ -374,13 +389,58 @@ svg{
         padding: 13px 20px;
         margin: 228px 0 0 190px;
     }
-}
-@media ((min-width:321px) and (max-width:375px)){
-    .process h1 {
-        width: 300px;
+    .product-img {
+        margin-top: 40px;
     }
 }
-
+@media (min-width:321px) and (max-width:425px){
+    .process h1 {
+        width: 305px;
+    }
+    section.benefits {
+        margin: 70px 0;
+    }
+    .benifits-head h1 {
+        width: 300px;
+    }
+    .benefits .container {
+        row-gap: 45px;
+    }
+    .num {
+        font-size: 40px;
+        align-self: end;
+    }
+    section.process {
+        margin-top: 80px;
+    }
+    .process .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .process-detail {
+        grid-template-rows: 2fr 1fr 2fr 1fr 2fr 1fr 2fr;
+    }
+    .product-img {
+        margin-top: 40px;
+    }
+    section.review {
+        margin: 80px 0;
+    }
+    .review-flex1 {
+        margin-bottom: 30px;
+    }
+    form {
+        width: 300px;
+        margin: 224px 0 0 0;
+    }
+    .about .container h1 {
+        flex-basis: 100px;
+    }
+    .subscribe {
+        padding: 13px 20px;
+        margin: 228px 0 0 190px;
+    }
+}
 @media (max-width:426px) {
     .container{
         margin: 0 16px;
@@ -413,15 +473,6 @@ svg{
         font-size: 35px;
         margin-top: 20px;
     }
-    footer .container {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-    }
-    .feedback-icon {
-        display: flex;
-        justify-content: center;
-    }
     .down-arrow{
         margin: 0;
     }
@@ -431,19 +482,25 @@ svg{
     .about .container h1 {
         width: 230px;
     }
-    .brand-detail {
-        margin: 0 auto;
-    }
     .btn .line {
         margin: -13px 0 0 101px;
     }
     .benefit-part {
         flex-direction: column;
+    } 
+    .arrow {
+        width: 120px;
+        margin: 6px 0 0 79px;
     }
-   
-    
+    footer .container {
+        display: flex;
+        flex-direction: column;
+    }
 }
 @media( (min-width:425px) and (max-width:768px) ){
+    .container{
+        margin: 0 16px;
+    }
     ul{
       display: none;
     }
@@ -460,10 +517,6 @@ svg{
         margin: 0;
         padding: 0;
         display: none;
-    }
-    .brand-detail {
-        padding: 0 20px;
-        margin: 0 auto;
     }
     section.benefits {
         margin: 100px 0;
@@ -504,14 +557,12 @@ svg{
         flex-direction: column;
         gap: 1rem;
     }
+    .exp-grid h1 {
+        width: 300px;
+    }  
     footer .container {
         display: flex;
         flex-direction: column;
-        text-align: center;
-    }
-    .feedback-icon {
-        display: flex;
-        justify-content: center;
     }
     form {
         width: 420px;
@@ -542,6 +593,7 @@ svg{
     }
   }
   @media( (min-width:769px) and (max-width:1200px) ){
+    
     section.banner .container {
         max-width: 768px;
     }
@@ -576,7 +628,7 @@ svg{
     .box {
         padding: 30px 40px;
         margin: 278px 0 0 -17px;
-    }
+    }  
     h1 {
         font-size: 35px;
     }
@@ -612,6 +664,9 @@ svg{
     }
     section.process {
         margin-top: 150px;
+    }
+    .process h1 {
+        width: 400px;
     }
     .process-detail {
         grid-template-rows: 3fr 1fr 2fr 1fr 2fr 1fr 2fr;
@@ -654,13 +709,16 @@ svg{
     }
 }
 @media( (min-width:1201px) and (max-width:1600px) ){
+    .benifits-head h1 {
+        align-self: center;
+        width: 500px;
+    }
+    section.benefits {
+        margin: 150px 0;
+    }
     .process h1 {
         width: 400px;
     }
-
-
-
-
     .nav-icon .icon{
         margin-right: 40px;
     }
@@ -681,7 +739,12 @@ svg{
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 3fr 4fr 2fr 3fr 1fr;
     }
-   
+    .about .container h1 {
+        flex-basis: 150px;
+    }
+    .arrow {
+        margin: 0px 0 0 79px;
+    }
     form {
         width: 740px;
         margin: 255px 0 0 0;
@@ -709,15 +772,14 @@ svg{
     }
     .about .container p {
         width: 500px;
+    }
+    .exp-grid h1 {
+        width: 400px;
     }  
 }
 @media (min-width:1601px) {
     h1{
         font-size: 45px;
-    }
-    .container{
-        max-width: 1200px;
-        margin: 0 auto;
     }
     .img {
         height: 565px;
@@ -737,6 +799,27 @@ svg{
     .box{
         margin: 495px 0 0 -30px;
     }
+    section.benefits {
+        margin: 150px 0;
+    }
+    .process h1 {
+        width: 400px;
+    }
+    .benifits-head h1 {
+        width: 500px;
+    }
+    .benefits .container {
+        row-gap: 70px;
+    }
+    section.process {
+        margin-top: 200px;
+    }
+    .process-detail {
+        grid-template-rows: 3fr 1fr 2fr 1fr 2fr 1fr 2fr;
+    }
+    .about .container h1 {
+        flex-basis: 150px;
+    }
     .review-flex1 {
         margin-top: 120px;
     }
@@ -752,6 +835,12 @@ svg{
     }
     .btn .line {
         width: 70px;
+    }
+    .exp-grid h1 {
+        width: 400px;
+    }
+    .arrow{
+        margin: 9px 0 0 79px;
     }
     form {
         width: 740px;
