@@ -399,6 +399,9 @@ svg{
     .about .container h1 {
         flex-basis: 100px;
     }
+    .about .container p {
+        padding-bottom: 10px;
+    }
     .arrow {
         width: 120px;
     }
@@ -440,11 +443,20 @@ svg{
         display: flex;
         flex-direction: column;
     }
+    .process-detail {
+        row-gap: 1rem;
+    }
+    .about .container p {
+        padding-bottom: 10px;
+    }
     .product-img {
         margin-top: 40px;
     }
     section.review {
         margin: 80px 0;
+    }
+    .exp-grid h1 {
+        margin: 20px 0;
     }
     .review-flex1 {
         margin-bottom: 30px;
@@ -509,6 +521,8 @@ svg{
     }
     .arrow {
         width: 120px;
+        top: 30px;
+        left: 80px;
     }
     footer .container {
         display: flex;
@@ -540,8 +554,11 @@ svg{
         padding: 0;
         display: none;
     }
+    .benefits .container {
+        row-gap: 50px;
+    }
     section.benefits {
-        margin: 100px 0;
+        margin: 70px 0;
     }
     .benifits-head h1 {
         width: 300px;
@@ -595,7 +612,7 @@ svg{
         margin-top: 60px;
     }
     section.process {
-        margin-top: 100px;
+        margin-top: 80px;
     }
     .btn .line {
         width: 73px;
@@ -603,9 +620,11 @@ svg{
     }
     .about .container p {
         width: 400px;
+        padding-bottom: 10px;
     }
     .about .container h1 {
         width: 425px;
+        flex-basis: 100px;
     }
     .nav-icon .icon {
         margin-left: 25px;
