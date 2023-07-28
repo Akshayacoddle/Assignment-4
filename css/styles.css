@@ -376,8 +376,12 @@ svg{
     .experience h1, .definition {
         padding: 20px 0;
     }
+    .process-detail {
+        row-gap: 1rem;
+    }
     .process h1 {
         width: 288px;
+        margin-bottom: 25px;
     }
     .about .container h1 {
         width: 230px;
@@ -387,7 +391,7 @@ svg{
         flex-direction: column;
     }
     section.process {
-        margin: 100px 0;
+        margin: 50px 0;
     }
     .review-flex1 {
         margin-bottom: 30px;
